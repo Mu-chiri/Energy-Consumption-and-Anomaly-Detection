@@ -63,17 +63,14 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-      - name: Delay before deployment
-        run: sleep 30s
-
 
       
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_D177440E4BB94C16B1DF82AB014971DA }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_FC1CDF66090147FB8F99A0516A799EE1 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C2F7DD89C5F441B38416C1F0C660D51C }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E179EDE8BB294D5B97AC6BB2773DD70C }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A8C61D9EBDE54682BA913BDD53602CC9 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_213BE0DBDA574AAEBA8B11CD706761A4 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
