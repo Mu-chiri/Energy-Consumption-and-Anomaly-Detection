@@ -63,6 +63,9 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
+      - name: Delay before deployment
+        run: sleep 30s
+
 
       
       - name: Login to Azure
